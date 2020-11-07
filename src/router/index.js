@@ -1,14 +1,18 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import AhaRouter from '../aha-router'
 import Home from '../views/Home.vue'
 
-Vue.use(VueRouter)
+Vue.use(AhaRouter)
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    beforeEnter (from, to, next) {
+      console.log('beforeEnter', from, to)
+      next()
+    }
   },
   {
     path: '/about',
@@ -20,7 +24,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = new AhaRouter({
   routes
 })
 

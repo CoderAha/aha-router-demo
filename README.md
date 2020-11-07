@@ -1,4 +1,6 @@
-# aha-router
+# Aha Router
+
+Mini 版 Vue Router
 
 ## Project setup
 ```
